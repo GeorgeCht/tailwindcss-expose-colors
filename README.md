@@ -1,8 +1,28 @@
-# @tailwind-plugin/expose-colors
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/logo-light.svg">
+    <img alt="Tailwind CSS" src=".github/logo-light.svg" width="350" height="70" style="max-width: 100%;">
+  </picture>
+  <p align="center">
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/TailwindCSS->v3.0.0-blue" alt="Required version"></a>
+    <a href="https://github.com/georgecht/tailwindcss-expose-colors/releases"><img src="https://img.shields.io/npm/v/tailwindcss-expose-colors.svg" alt="Latest Release"></a>
+    <a href="https://github.com/georgecht/tailwindcss-expose-colors/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/tailwindcss-expose-colors.svg" alt="License"></a>
+  </p>
+  <h1 align="center">@tailwind-plugin/expose-colors</h1>
+</p>
+
+<br>
 
 ## Introduction
 
 This is a pretty much straighforward Tailwind plugin that allows you to expose Tailwind's colors and their shades, including any custom ones included in your own theme, as custom CSS properties on the :root element. This can be useful for maintaining a consistent color theme across your project and easily accessing Tailwind colors in your stylesheets.
+
+## Requirements
+
+This plugin is built upon [TailwindCSS](https://github.com/tailwindlabs/tailwindcss/releases/latest). Therefore, TailwindCSS v3.0.0 is at least required. Get started [here](https://tailwindcss.com/docs/installation).
+
+It's also recommended that you have a basic understanding of CSS and how to install Tailwind plugins. Learn more about Tailwind plugins [here](https://tailwindcss.com/docs/plugins).
 
 ## Install
 
@@ -149,9 +169,9 @@ module.exports = {
 The exposed variable colors will be in `'rgb'` format so you can use them like so:
 
 ```css
-  .myclass {
-    background: rgba(var(--tw-tahiti-500), 0.8);
-  }
+.myclass {
+  background: rgba(var(--tw-tahiti-500), 0.8);
+}
 ```
 
 ## Authors
