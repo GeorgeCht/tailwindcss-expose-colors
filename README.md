@@ -14,6 +14,8 @@
 
 <br>
 
+<img alt="Code example" src=".github/code.png" style="max-width: 100%;">
+
 ## Introduction
 
 This is a pretty much straighforward Tailwind plugin that allows you to expose Tailwind's colors and their shades, including any custom ones included in your own theme, as custom CSS properties on the :root element. This can be useful for maintaining a consistent color theme across your project and easily accessing Tailwind colors in your stylesheets.
