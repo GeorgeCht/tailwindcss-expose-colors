@@ -1,4 +1,4 @@
-# Tailwind Expose Colors
+# @tailwind-plugin/expose-colors
 
 ## Introduction
 
@@ -9,7 +9,7 @@ This is a pretty much straighforward Tailwind plugin that exposes all of Tailwin
 Install the plugin from npm:
 
 ```
-npm i -D tailwindcss-expose-colors
+npm i -D @tailwind-plugin/expose-colors
 ```
 
 Then add the plugin to your tailwind.config.js file:
@@ -21,7 +21,7 @@ module.exports = {
     // ...
   },
   plugins: [
-    require('tailwindcss-expose-colors'),
+    require('@tailwind-plugin/expose-colors'),
     // ...
   ],
 }
