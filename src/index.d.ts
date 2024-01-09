@@ -28,5 +28,3 @@ export function parseColor(value: string, { loose }?: {
     color: string[];
     alpha: string | undefined;
 } | null;
-
-//# sourceMappingURL=index.d.ts.map
