@@ -1,7 +1,7 @@
 {
-  "name": "@tailwindcss/expose-colors",
+  "name": "tailwindcss-expose-colors",
   "description": "Tailwind CSS plugin that exposes Tailwind colors as custom CSS properties",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "GeorgeCht <georgecht@icloud.com>",
   "license": "MIT",
   "bugs": {
