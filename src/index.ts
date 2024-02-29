@@ -27,7 +27,7 @@ export function extractColorVars(colorObj: ColorObjectType, colorGroup = '', pre
         ? {
             [cssVariable]: mode === 'hex' ? value : parseColor(value)?.color.join(', '),
           }
-        : extractColorVars(value, `-${colorKey}`, prefix, mode)
+        : extractColorVars(value, `${colorGroup}-${colorKey}`, prefix, mode)
 
     return { ...vars, ...newVars }
   }, {})
