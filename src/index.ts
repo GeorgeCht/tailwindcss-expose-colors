@@ -92,7 +92,7 @@ export function parseColor(value: string, { loose = false } = {}) {
  * @param options - The plugin configuration options.
  * @returns A function that can be used as a Tailwind CSS plugin.
  */
-module.exports = function ({ extract = 'all', prefix = '--tw', mode = 'hex' }: PluginOptions) {
+module.exports = function exposeColors({ extract = 'all', prefix = '--tw', mode = 'hex' }: PluginOptions) {
   return function ({ addBase, theme }: PluginAPI) {
     if (extract === 'all') {
       addBase({ ':root': extractColorVars(theme('colors'), '', prefix, mode) })
