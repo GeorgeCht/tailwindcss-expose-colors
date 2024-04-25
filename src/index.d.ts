@@ -1,4 +1,11 @@
+type PluginOptions = {
+    extract: string | Array<string>
+    prefix: `-${string}`
+    mode: 'hex' | 'rgb'
+};
+
 type ColorObjectType = Record<string, string>;
+
 /**
  * Extracts color variables based on the provided keys recursively.
  * @param colorObj - The object containing color definitions.
@@ -8,6 +15,7 @@ type ColorObjectType = Record<string, string>;
  * @returns An object with CSS variables representing the extracted colors.
  */
 export function extractColorVars(colorObj: ColorObjectType, colorGroup?: string, prefix?: string, mode?: string): {};
+
 /**
  * Filters a color theme based on the specified keys.
  * @param keys - The keys to filter the color theme.
@@ -15,6 +23,7 @@ export function extractColorVars(colorObj: ColorObjectType, colorGroup?: string,
  * @returns A filtered color theme object containing only the specified keys.
  */
 export function filterTheme(keys: Array<keyof ColorObjectType>, themeColors: ColorObjectType): ColorObjectType;
+
 /**
  * Parses a color string and extracts color components.
  * @param value - The color string to parse.
@@ -28,3 +37,10 @@ export function parseColor(value: string, { loose }?: {
     color: string[];
     alpha: string | undefined;
 } | null;
+
+/**
+ * Tailwind CSS plugin that exposes Tailwind colors as custom CSS properties on the :root element.
+ * @param options - The plugin configuration options.
+ * @returns A function that can be used as a Tailwind CSS plugin.
+ */
+export default function exposeColors(options?: PluginOptions);
